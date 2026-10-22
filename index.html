@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <title>Swish — Free Throw Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Swish home">
+        <span class="brand-mark">S</span>
+        <span>SWISH<span class="brand-light"> CLUB</span></span>
+      </a>
+      <div class="top-note"><span class="live-dot"></span> FREE THROW CHALLENGE</div>
+      <div class="round-count">SHOT <strong id="shotCount">01</strong><span> / 10</span></div>
+    </header>
+
+    <section class="game-layout" aria-label="Basketball free throw game">
+      <aside class="intro">
+        <p class="eyebrow"><span></span> AT THE LINE</p>
+        <h1>Find your<br><em>swish.</em></h1>
+        <p class="intro-copy">Set your angle. Choose your power. Sink as many free throws as you can.</p>
+
+        <div class="score-card">
+          <span class="score-icon">◎</span>
+          <span>
+            <small>YOUR SCORE</small>
+            <strong id="score">0 <i>/ 10</i></strong>
+          </span>
+          <span class="score-label">READY</span>
+        </div>
+
+        <div class="how-to">
+          <div class="guide-title">HOW TO SHOOT</div>
+          <p><b>1</b> Aim by moving your mouse or finger.</p>
+          <p><b>2</b> Hold the button to build shot power.</p>
+          <p><b>3</b> Release to shoot. Aim for the hoop!</p>
+        </div>
+
+        <button class="reset-button" id="resetButton" type="button">↻ &nbsp; NEW GAME</button>
+      </aside>
+
+      <div class="game-column">
+        <div class="game-frame" id="gameFrame">
+          <canvas id="game" aria-label="Basketball free throw court. Aim and hold to charge a shot, then release." tabindex="0"></canvas>
+
+          <div class="hud">
+            <div><span>ANGLE</span><strong id="angleReadout">48°</strong></div>
+            <div class="power-meter">
+              <span>SHOT POWER</span>
+              <div class="meter-track"><i id="powerFill"></i></div>
+              <strong id="powerReadout">HOLD TO CHARGE</strong>
+            </div>
+            <div class="distance-stat"><span>PERFECT ARC</span><strong>↑</strong></div>
+          </div>
+
+          <div class="message" id="message">
+            <span class="message-star">✦</span>
+            <strong id="messageTitle">Ready at the line?</strong>
+            <span id="messageText">Move to aim, then hold and release to shoot.</span>
+          </div>
+          <div class="touch-tip">HOLD ANYWHERE TO CHARGE · RELEASE TO SHOOT</div>
+        </div>
+
+        <div class="game-footer">
+          <span><span class="footer-dot"></span> TEN SHOTS. ONE HOT STREAK.</span>
+          <span>TAKE YOUR TIME <b>·</b> FIND YOUR FORM</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <span>SWISH CLUB <span class="footer-copy">© 2026</span></span>
+      <span>KEEP YOUR EYE ON THE RIM.</span>
+    </footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
